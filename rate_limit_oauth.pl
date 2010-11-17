@@ -17,7 +17,7 @@ $addaction = sub {
 				my $isdst)=localtime($reset_time_in_seconds);
 			my $reset_time = sprintf "%4d-%02d-%02d %02d:%02d:%02d", 
 				$year+1900,$mon+1,$mday,$hour,$min,$sec;
-			print "Remaing hits ".$result->{'remaining_hits'}.", resets at ".
+			print "Remaining hits ".$result->{'remaining_hits'}.", resets at ".
 				$reset_time.". Hourly limit is ".$result->{'hourly_limit'}.".\n";
 			return 1;
       }
