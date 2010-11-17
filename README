@@ -3,4 +3,12 @@ download the client from
 
 http://www.floodgap.com/software/ttytter/
 
+The current tools are:
 
+/fsearch <string>
+/limit
+/later <tweet id> <description>
+
+and information about them can be found at:
+
+https://www.reuteras.com/Projects/TTYtter
