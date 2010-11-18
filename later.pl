@@ -22,7 +22,7 @@ $addaction = sub {
 		if ($content =~ m!<result code="done" />!){
 			print "Added to delicious.com\n";
 			if ($testing == "hudson-test"){
-				`echo "$delicious_url" > /tmp/hudson-ttytter-later-test`;
+				`echo "$add_url" > hudson-ttytter-later-test`;
 			}
 		}else{ 
 			print "Something went wrong, not added. Se response:\n";
