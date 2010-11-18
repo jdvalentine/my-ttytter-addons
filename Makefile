@@ -1,3 +1,5 @@
+test-ttytter-version:
+	echo '/r' | ttytter -vcheck  | grep "your version of TTYtter is up to date"
 test-fsearch: 
 	echo "/fsearch reuteras" | ./bin/ttytter -exts=friend_search_oauth.pl -ssl -simplestart | grep "Screen name: reuteras. Name: Peter Reuterås"
 test-limit:
