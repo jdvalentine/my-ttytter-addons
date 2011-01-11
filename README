@@ -1,4 +1,5 @@
-My addons to the twitter client TTYtter made by Cameron Kaiser. You can
+My modifications of Reuteras (https://github.com/reuteras) addons to the twitter client TTYtter.
+If you like the sound of a command line twitter experience, you can
 download the client from 
 
 http://www.floodgap.com/software/ttytter/
@@ -9,6 +10,11 @@ The current tools are:
 /limit
 /later <tweet id> <description>
 
-and information about them can be found at:
+I am modifying /later so that it posts to Instapaper.com as a personal objective which might
+be useful to others.
+
+and information about these tools can be found at:
 
 https://www.reuteras.com/Projects/TTYtter
+http://jdv.me.uk/archives/140-ttytter-extension-for-posting-to-Instapaper.html
+
