@@ -14,13 +14,15 @@ $addaction = sub {
 		    print $stdout "-- sorry, no such tweet (yet?).\n";
 		    return 1;
 		}
-		chop( my $del_pass=`cat ~/.delicious`);
+		chop( my $instapaper_pass=`cat ~/.instapaper`);
 		my $add_url="http://twitter.com/$tweet->{'user'}->{'screen_name'}/statuses/$tweet->{'id'}";
-		my $delicious_url="https://api.del.icio.us/v1/posts/add?url=" .
+		my $instapaper_url="https://www.instapaper.com/api/add?url=" .
 			$add_url . "&tags=\@ttytter_added\@&shared=no&description=$desc";
-		my $content = `curl -s -u \"$del_pass\" \"$delicious_url\"`;
+		my $content = `curl -s -u \"$instapaper_pass\" \"$instapaper_url\"`;
+        print $instapaper_url;
+        print $content;
 		if ($content =~ m!<result code="done" />!){
-			print "Added to delicious.com\n";
+			print "Added to instapaper.com\n";
 			if ($testing == "hudson-test"){
 				`echo "$add_url" > hudson-ttytter-later-test`;
 			}
