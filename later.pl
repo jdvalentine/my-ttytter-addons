@@ -22,13 +22,8 @@ $addaction = sub {
 		my $content = `curl -s \"$instapaper_url\"`;
         
 		if ($content =~ m!201!){
-			print "\nAdded to instapaper.com\n";
-			if ($testing == "hudson-test"){
-				`echo "$add_url" > hudson-ttytter-later-test`;
-			}
 		}else{ 
-			print "Something went wrong, not added. Response: ";
-			print $content;
+			print "Something went wrong, not added. Response: $content";
 		}
 		return 1;
 	}
