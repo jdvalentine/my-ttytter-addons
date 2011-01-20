@@ -22,6 +22,7 @@ $addaction = sub {
 		my $content = `curl -s \"$instapaper_url\"`;
         
 		if ($content =~ m!201!){
+			print "Added to instapaper.com\n";
 		}else{ 
 			print "Something went wrong, not added. Response: $content";
 		}
